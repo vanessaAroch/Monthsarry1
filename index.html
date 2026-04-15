@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 1st Monthsary!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Quicksand:wght@300;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #fff5f7;
+            font-family: 'Quicksand', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        #landing {
+            text-align: center;
+            transition: opacity 0.8s ease;
+        }
+
+        .heart-btn {
+            background: #ff4d6d;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(255, 77, 109, 0.3);
+            transition: transform 0.3s;
+        }
+
+        .heart-btn:hover { transform: scale(1.1); }
+
+        #main-content {
+            display: none;
+            max-width: 500px;
+            width: 90%;
+            padding: 20px;
+            text-align: center;
+            animation: fadeIn 1.5s ease;
+        }
+
+        h1 { font-family: 'Dancing Script', cursive; color: #ff4d6d; font-size: 2.5rem; }
+
+        .image-gallery {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .image-gallery img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .message {
+            background: white;
+            padding: 25px;
+            border-radius: 20px;
+            line-height: 1.6;
+            color: #444;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            text-align: left;
+        }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body>
+
+    <div id="landing">
+        <h1>Hi Love, I have a surprise for you...</h1>
+        <button class="heart-btn" onclick="reveal()">Open Message ❤️</button>
+    </div>
+
+    <div id="main-content">
+        <h1>Happy 1st Monthsary!</h1>
+        
+        <div class="image-gallery">
+            <img src="monthsarry2.jpg" alt="Flowers">
+            <img src="monthsarry1.jpg" alt="Initial Ring">
+        </div>
+
+        <div class="message">
+            <p><strong>Hi Love!</strong> I just wanted to take a moment para mag-thank you sa lahat ng surprises mo. Sobrang ganda nung flowers, pero yung initial ring talaga yung nagpaiyak sa akin—seeing your letter on my finger makes me feel like you’re always holding my hand kahit sobrang layo natin. It’s a constant reminder na kahit may miles between us, I carry a piece of you with me everywhere I go.</p>
+            
+            <p>Thank you for the genuine happiness na binibigay mo sa akin araw-araw. Long distance is never easy, but you make it feel so worth it by making me feel loved and seen in the simplest ways. I promise to treasure this ring and everything it stands for. I can't wait for the day na hindi na lang symbols yung hawak ko, kundi ikaw na mismo. I love you so much!</p>
+        </div>
+        
+        <p style="margin-top: 30px; font-size: 0.8rem; color: #888;">Forever yours, [Your Name]</p>
+    </div>
+
+    <script>
+        function reveal() {
+            document.getElementById('landing').style.opacity = '0';
+            setTimeout(() => {
+                document.getElementById('landing').style.display = 'none';
+                document.getElementById('main-content').style.display = 'block';
+            }, 800);
+        }
+    </script>
+</body>
+</html>
